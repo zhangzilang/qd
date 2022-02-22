@@ -42,9 +42,6 @@ jobs:
                 user_num=${#user_list[*]}
                 pwd_num=${#pwd_list[*]}
                 if [ $user_num != $pwd_num ];then
-                echo "账号和密码个数不对应"
-                exit 1
-                else
                 echo "共有 $user_num 个账号，即将开始签到"
                 fi
                 for ((i=0;i<$user_num;i++))
@@ -54,4 +51,3 @@ jobs:
                 ${pwd_list[$i]}
                 EOF
                 done
-#最后推送 2021年5月19日
